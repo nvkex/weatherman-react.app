@@ -1,0 +1,48 @@
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+.data-box * {
+    box-sizing: border-box;
+  }
+
+.card{
+    text-align: center;
+    padding: 0 10px;
+    border:1px solid rgb(236, 235, 235);
+    border-radius: 4px;
+    box-shadow: 0 0px 6px 0px rgba(100, 100, 100, 0.4);
+}
+
+.card h2{
+    text-transform: uppercase;
+    color:lightcoral;
+}
+
+.card p{
+    color:darkcyan;
+    font-size: 20px;
+}
+
+.column{
+    width:25%;
+    float:left;
+    padding:0 10px;
+}
+
+.data-box{
+    margin:0 100px;
+}
+
+.row{
+    margin: 40px 0;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

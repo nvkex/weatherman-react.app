@@ -1,5 +1,5 @@
 const request = require('request');
-const apiKey = "w72iF1NQkfCYTd6Fp4GnXkc5mpYI61WA";
+const apiKey = "APIKEY";
 const city = "Lucknow";
 const citySearchURL = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=" + apiKey + "&q=" + city;
 var cityKey = 0;

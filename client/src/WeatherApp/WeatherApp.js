@@ -13,7 +13,7 @@ class WeatherApp extends React.Component {
 
     getWeather = async (city) => {
 
-        const base = "http://localhost:9000/weather?city=" + city;
+        const base = "https://abracadabrant-choucroute-66376.herokuapp.com/weather?city=" + city;
         const response = await fetch(base);
         const data = await response.json();
         return data;

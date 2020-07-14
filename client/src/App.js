@@ -1,6 +1,6 @@
 import React from 'react';
 import WeatherApp from './WeatherApp/WeatherApp';
-import './App.css';
+
 import NavBar from './WeatherApp/Components/NavBar/NavBar';
 import Footer from './WeatherApp/Components/Footer/Footer';
 

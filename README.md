@@ -2,7 +2,6 @@
 Weather Forecast React App
 
 # Serve the app
-* Download the build folder
 * Run the following commands on terminal
   * `cd build`
   * `node app.js`

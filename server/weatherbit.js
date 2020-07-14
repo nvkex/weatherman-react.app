@@ -1,5 +1,5 @@
 const request = require('request');
-const apiKey = "5df5979e1c8a488abbcb3addd81decc8";
+const apiKey = "APIKEY";
 // const city = "Lucknow"
 
 const getForecast = (city,callback) => {

@@ -4,6 +4,25 @@
     margin:10px auto;
 }
 
+.msg, .err-msg, .loading{
+    font-size:18px;
+    margin:0 auto;
+    width:20%;
+    background-color: aliceblue;
+    padding:10px;
+    text-align: center;
+    color:#aaaaaa
+}
+
+.loading{
+    background-color: rgb(161, 255, 181);
+}
+
+.err-msg{
+    background-color: rgb(255, 255, 161);
+    color: rgb(175, 75, 75);
+}
+
 .search-box{
     width:40%;
     color:rgb(94, 94, 94);

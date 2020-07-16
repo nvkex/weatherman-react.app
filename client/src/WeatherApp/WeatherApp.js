@@ -7,7 +7,7 @@ class WeatherApp extends React.Component {
         super(props);
         this.state = {
             weatherData: {},
-            empty: true
+            stage: 0
         };
     }
 
@@ -20,33 +20,43 @@ class WeatherApp extends React.Component {
     }
 
     callAPI() {
+        this.setState({stage: 1 });
         this.getWeather(document.getElementById('cityInput').value).then((data) => {
-            this.setState({ weatherData: data, empty: false });
+            this.setState({ weatherData: data, stage: 2 });
         })
         .catch( err => {
-            this.setState({ empty: true });
+            this.setState({ stage: -1 });
         });
     }
 
     
     render() {
         let body = null;
-        if (!this.state.empty) {
+        if (this.state.stage === 0) {
+            body = (
+                <div className="msg">Type in the city name.</div>
+            )
+        }
+        else if(this.state.stage === 1){
+            body = (
+                <div className="loading">
+                    Loading....
+                </div>
+            )
+        }
+        else if(this.state.stage === 2){
             if (!this.state.weatherData.err) {
-                body = (
-                    <div>Fetching.....</div>
-                )
                 body = (
                     <WeatherDataCards data = {this.state.weatherData.data}/>
                 );
             }
-            else{
-                body = (
-                    <div className = "err-msg">
-                        Error: Cannot connect to the server!
-                    </div>
-                )
-            }
+        }
+        else{
+            body = (
+                <div className = "err-msg">
+                    Server Error!
+                </div>
+            )
         }
 
         return (
